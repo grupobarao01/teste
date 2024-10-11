@@ -58,3 +58,7 @@ body {
 .resultados {
     margin-top: 20px;
 }
+
+.row{
+    justify-content: center;
+}
