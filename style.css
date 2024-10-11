@@ -1,9 +1,4 @@
-.vstack {
-    display: flex;
-    flex: 0 0 auto;
-    flex-direction: column;
-    align-self: stretch;
-  }
+
 body {
     font-family: Arial, sans-serif;
     display: flex;
