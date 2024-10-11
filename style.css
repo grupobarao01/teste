@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.urna {
+    width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.display {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#num-candidato {
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #000;
+}
+
+.btn {
+    width: 80px;
+    height: 50px;
+    font-size: 18px;
+}
+
+.btn-funcao {
+    width: 80px;
+    height: 50px;
+    background-color: #f57c00;
+    color: white;
+    margin: 5px;
+}
+
+#btn-confirma {
+    background-color: #4caf50;
+}
+
+.btn-numero {
+    width: 80px;
+    height: 50px;
+    font-size: 18px;
+}
+
+.resultados {
+    margin-top: 20px;
+}
