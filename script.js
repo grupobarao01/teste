@@ -57,9 +57,9 @@ document.getElementById('btn-confirma').addEventListener('click', () => {
 document.getElementById('btn-resultados').addEventListener('click', () => {
     const resultadoDiv = document.getElementById('resultado-votos');
     resultadoDiv.innerHTML = `
-        <p>Candidato A (12): ${votos[12]} votos</p>
-        <p>Candidato B (34): ${votos[34]} votos</p>
-        <p>Candidato C (56): ${votos[56]} votos</p>
+        <p>Candidato A (99): ${votos[99]} votos</p>
+        <p>Candidato B (75): ${votos[75]} votos</p>
+        <p>Candidato C (22): ${votos[22]} votos</p>
         <p>Votos em Branco: ${votos.branco}</p>
         <p>Votos Nulos: ${votos.nulo}</p>
     `;
