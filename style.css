@@ -152,7 +152,7 @@ nav ul li a:hover {
 
 #carrinho ul li {
     padding: 8px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ffffff;
     display: flex;
     justify-content: space-between;
     align-items: center;
