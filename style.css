@@ -135,7 +135,7 @@ nav ul li a:hover {
 
 /* Carrinho de Compras */
 #carrinho {
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
     padding: 20px;
     margin: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
