@@ -158,6 +158,11 @@ nav ul li a:hover {
     align-items: center;
 }
 
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
 
 #total {
     font-weight: bold;
