@@ -4,12 +4,12 @@ let total = carrinho.reduce((acc, item) => acc + item.preco * item.quantidade, 0
 
 // Dados do estoque dos produtos
 const estoqueProdutos = {
-    1: 5, // Produto 1
-    2: 3, // Produto 2
-    3: 2, // Produto 3
-    4: 6,
-    5: 8,
-    6: 1
+    1: 56, // Produto 1
+    2: 34, // Produto 2
+    3: 23, // Produto 3
+    4: 67,
+    5: 89,
+    6: 34
 };
 
 // Função para salvar o carrinho no localStorage
