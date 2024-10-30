@@ -137,6 +137,24 @@ function finalizarCompra() {
     atualizarCarrinho();
 }
 
+const btnPix = document.getElementById('pix');
+btnPix.addEventListener('click', formaPagamento);
+const btnCredito = document.getElementById('credito');
+btnPix.addEventListener('click', formaPagamento);
+const btnBoleto = document.getElementById('boleto');
+btnPix.addEventListener('click', formaPagamento);
+
+function formaPagamento() {
+    const modal = bootstrap.Modal.getElementById(
+        document.getElementById('ExemploModalCentalizado'),);
+
+ if (modal){
+    modal.hide();
+    alert('Compra Finalizada');
+   }
+ }
+    
+{
 // Função para remover todos os itens do carrinho
 function removerTodosItens() {
     carrinho = [];
