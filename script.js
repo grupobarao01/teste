@@ -8,12 +8,12 @@ let total = carrinho.reduce(
 
 // Dados do estoque dos produtos
 const estoqueProdutos = {
-  1: 5, // Produto 1
-  2: 3, // Produto 2
-  3: 2, // Produto 3
-  4: 6,
-  5: 8,
-  6: 1,
+  1: 53, // Produto 1
+  2: 32, // Produto 2
+  3: 21, // Produto 3
+  4: 65,
+  5: 87,
+  6: 10,
 };
 
 // Função para salvar o carrinho no localStorage
