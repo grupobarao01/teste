@@ -125,6 +125,11 @@ function finalizarCompra() {
         return;
     }
     
+  const modal = new bootstrap.Modal(
+    document.getElementById('ExemploModalCentralizado'),
+  );
+  modal.show();
+
     alert('Compra finalizada! Obrigado pela preferência.');
     carrinho = [];
     total = 0;
