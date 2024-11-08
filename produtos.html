@@ -14,16 +14,15 @@
 
     <!-- Barra de Navegação -->
     <nav class="navbar">
-
         <div class="container">
             <div class="col-1">
                 <a class="navbar-brand" href="index.html">
-                    <img src="https://via.placeholder.com/250" alt="" width="30" height="24">
+                    <img src="assets/logo.png" alt="Logo" width="57" height="49">
                 </a>
             </div>
             <div class="col-11">
                 <ul>
-                    <li><a href="index.html">Início</a></li>
+      <li><a href="index.html">Início</a></li>
                     <i class="bi bi-house"></i>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
                       <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
@@ -45,8 +44,8 @@
                 </ul>
             </div>
         </div>
-
     </nav>
+    
 
 
     <!-- Barra de Pesquisa -->
@@ -56,50 +55,71 @@
 
     <!-- Galeria de Produtos -->
     <div class="container" id="produtosContainer">
-        <div class="produto" data-nome="Produto 1">
-            <img src="https://via.placeholder.com/250" alt="Produto 1">
-            <h2>Produto 1</h2>
-            <p>Preço: R$ 50,00</p>
-            <p id="estoque-produto-1">Estoque: 5</p>
-            <button id="btn-produto-1" class="btn btn-primary" onclick="adicionarAoCarrinho('Produto 1', 50, 1)">Adicionar ao Carrinho</button>
+        <div class="produto" data-nome="jogo 4 Pneus Itaro Aro 14 IT203 175/75R14 86T">
+            <img src="https://a-static.mlcdn.com.br/800x560/jogo-4-pneus-itaro-aro-14-it203-175-75r14-86t/pneustore/it16001187/4dc2a198be39b41cde27d019a84787f5.jpeg" alt="Produto 1">
+            <h2>Jogo 4 Pneus Itaro Aro 14 IT203 175/75R14 86T</h2>
+            <p>Preço: R$ 1.084,49</p>
+            <p id="estoque-produto-1">Estoque: 49</p>
+            <button id="btn-produto-1" class="btn btn-primary" onclick="adicionarAoCarrinho('jogo 4 Pneus Itaro Aro 14 IT203 175/75R14 86T', 1084.49, 1)">Adicionar ao Carrinho</button>
         </div>
-        <div class="produto" data-nome="Produto 2">
-            <img src="https://via.placeholder.com/250" alt="Produto 2">
-            <h2>Produto 2</h2>
-            <p>Preço: R$ 100,00</p>
-            <p id="estoque-produto-2">Estoque: 3</p>
-            <button id="btn-produto-2" class="btn btn-primary" onclick="adicionarAoCarrinho('Produto 2', 100, 2)">Adicionar ao Carrinho</button>
+        <div class="produto" data-nome="Punho Luz Yamaha Fazer 250 2005 A 2010 Magnetron">
+            <img src="https://a-static.mlcdn.com.br/470x352/punho-luz-yamaha-fazer-250-2005-a-2010-magnetron/sommersp/6858/133f9e184002ab1307800922dd24a1fb.jpeg"Produto 2">
+            <h2>Punho Luz Yamaha Fazer 250 2005 A 2010 Magnetron</h2>
+            <p>Preço: R$ 30,34</p>
+            <p id="estoque-produto-2">Estoque: 49</p>
+            <button id="btn-produto-2" class="btn btn-primary" onclick="adicionarAoCarrinho('Punho Luz Yamaha Fazer 250 2005 A 2010 Magnetron', 30.34, 2)">Adicionar ao Carrinho</button>
         </div>
-        <div class="produto" data-nome="Produto 3">
-            <img src="https://via.placeholder.com/250" alt="Produto 3">
-            <h2>Produto 3</h2>
-            <p>Preço: R$ 150,00</p>
-            <p id="estoque-produto-3">Estoque: 2</p>
-            <button id="btn-produto-3" class="btn btn-primary" onclick="adicionarAoCarrinho('Produto 3', 150, 3)">Adicionar ao Carrinho</button>
-        </div>
-
-        <div class="produto" data-nome="Produto 4">
-            <img src="https://via.placeholder.com/250" alt="Produto 3">
-            <h2>Produto 4</h2>
-            <p>Preço: R$ 150,00</p>
-            <p id="estoque-produto-4">Estoque: 2</p>
-            <button id="btn-produto-4" class="btn btn-primary" onclick="adicionarAoCarrinho('Produto 4', 144, 4)">Adicionar ao Carrinho</button>
+        <div class="produto" data-nome="Rádio Som Automotivo MP3 Para Carro Lehmox - LEY-1565">
+            <img src="https://cdnv2.moovin.com.br/audiostock/imagens/produtos/det/kit-de-som-para-carro-radio-bluetooth-mais-alto-falante-bomber-6-triaxial-50w--f15744245ad97f3b225e3880f8aa27e8.png" alt="Produto 3">
+            <h2>Rádio Som Automotivo MP3 Para Carro Lehmox - LEY-1565</h2>
+            <p>Preço: R$ 70,00</p>
+            <p id="estoque-produto-3">Estoque: 49</p>
+            <button id="btn-produto-3" class="btn btn-primary" onclick="adicionarAoCarrinho('Rádio Som Automotivo MP3 Para Carro Lehmox - LEY-1565', 70.00, 3)">Adicionar ao Carrinho</button>
         </div>
 
-        <div class="produto" data-nome="Produto 5">
-            <img src="https://via.placeholder.com/250" alt="Produto 3">
-            <h2>Produto 5</h2>
-            <p>Preço: R$ 150,00</p>
-            <p id="estoque-produto-5">Estoque: 2</p>
-            <button id="btn-produto-5" class="btn btn-primary" onclick="adicionarAoCarrinho('Produto 5', 155, 5)">Adicionar ao Carrinho</button>
+        <div class="produto" data-nome="4 Óleo Semissintético 10W30 Petronas e Filtro Óleo MANN-FILTER Fit 1.4 1.5 2003 a 2021">
+            <img src="https://a-static.mlcdn.com.br/450x450/4-oleo-10w30-petronas-e-filtro-oleo-mann-filter-fit-1-4-1-5/lojahipervarejo/kt70621e19br0m/32941f3589391eb275cad3ee77c05173.jpeg" alt="Produto 3">
+            <h2>4 Óleo Semissintético 10W30 Petronas e Filtro Óleo MANN-FILTER Fit 1.4 1.5 2003 a 2021</h2>
+            <p>Preço: R$ 114,86</p>
+            <p id="estoque-produto-4">Estoque: 49</p>
+            <button id="btn-produto-4" class="btn btn-primary" onclick="adicionarAoCarrinho('4 Óleo Semissintético 10W30 Petronas e Filtro Óleo MANN-FILTER Fit 1.4 1.5 2003 a 2021', 114.86, 4)">Adicionar ao Carrinho</button>
         </div>
 
-        <div class="produto" data-nome="Produto 6">
-            <img src="https://via.placeholder.com/250" alt="Produto 3">
-            <h2>Produto 6</h2>
-            <p>Preço: R$ 150,00</p>
-            <p id="estoque-produto-6">Estoque: 2</p>
-            <button id="btn-produto-6" class="btn btn-primary" onclick="adicionarAoCarrinho('Produto 6', 156, 6)">Adicionar ao Carrinho</button>
+        <div class="produto" data-nome="Oleo Mobil Super Original Para Carro Api Sl 20w-50 - Mundo peças auto">
+            <img src="https://cdn.awsli.com.br/600x1000/1342/1342456/produto/148071058/af24505aad.jpg" alt="produto 3">
+            <h2>Oleo Mobil Super Original Para Carro Api Sl 20w-50 - Mundo peças auto</h2>
+            <p>Preço: R$ 23,66</p>
+            <p id="estoque-produto-5">Estoque: 49</p>
+            <button id="btn-produto-5" class="btn btn-primary" onclick="adicionarAoCarrinho('Oleo Mobil Super Original Para Carro Api Sl 20w-50 - Mundo peças auto', 23.66, 5)">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="produto" data-nome="Par Farol Palio Siena Strada G3 2003 2004 2005 2006 2007 2008 a 2016 Máscara Cromada">
+            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTER_69pDThyews4Kn5hP2qqhtsn4duHqyGSBfdme1p4hYP9ZFBXF4S6WG424WqfPUN3xXni9W894NLZbuE_bSudzR5wKycgOsHMwTyN2_34GULP3O4nrza7w&usqp=CAE" alt="Produto 3">
+            <h2>Par Farol Palio Siena Strada G3 2003 2004 2005 2006 2007 2008 a 2016 Máscara Cromada</h2>
+            <p>Preço: R$ 348,00</p>
+            <p id="estoque-produto-6">Estoque: 49</p>
+            <button id="btn-produto-6" class="btn btn-primary" onclick="adicionarAoCarrinho('Par Farol Palio Siena Strada G3 2003 2004 2005 2006 2007 2008 a 2016 Máscara Cromada', 348.00, 6)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto" data-nome="Ponteira De Escapamento Esportivo Universal Cores Carro">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_743515-MLB73490660198_122023-O.webp" alt="Produto 3">
+            <h2>Ponteira De Escapamento Esportivo Universal Cores Carro</h2>
+            <p>Preço: R$ 47,40</p>
+            <p id="estoque-produto-7">Estoque: 49</p>
+            <button id="btn-produto-7" class="btn btn-primary" onclick="adicionarAoCarrinho('Produto 7', 150.00, 7)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto" data-nome="Capa De Volante De Carro De Couro PU Antiderrapante Durável 38CM De Fibra Dinâmica Decoração">
+            <img src="https://down-br.img.susercontent.com/file/eb857460d8919590a00894857430a36a" alt="Produto 3">
+            <h2>Capa De Volante De Carro Couro PU 38CM De Fibra Dinâmica</h2>
+            <p>Preço: R$ 71,20</p>
+            <p id="estoque-produto-8">Estoque: 49</p>
+            <button id="btn-produto-8" class="btn btn-primary" onclick="adicionarAoCarrinho('Produto 8', 71.20, 8)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto" data-nome="Capa Pra Carro Banco Couro E Tapetes Vw Gol Voyage E Parati">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_797433-MLB69215323026_052023-O.webp" alt="Produto 3">
+            <h2>Capa Pra Carro Banco Couro E Tapetes Vw Gol Voyage E Parati</h2>
+            <p>Preço: R$ 150.00</p>
+            <p id="estoque-produto-9">Estoque: 49</p>
+            <button id="btn-produto-9" class="btn btn-primary" onclick="adicionarAoCarrinho('Produto 9',150.00, 9)">Adicionar ao Carrinho</button>
         </div>
 
         
@@ -107,13 +127,13 @@
 
     <div class="card text-center bottom-0 start-50 translate-middle-x w-100">
         <div class="card-header">
-          Featured
+            Dúvidas
         </div>
         <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <h5 class="card-title">(64) 99905-7295</h5>
+            <p class="card-text">@altopeças_e-commerce</p>
         </div>
-      </div>
+    </div>
 
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

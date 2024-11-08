@@ -1,5 +1,4 @@
 // Carregar o carrinho do localStorage
-//https://www.invertexto.com/qwws21
 let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 let total = carrinho.reduce(
   (acc, item) => acc + item.preco * item.quantidade,
@@ -8,12 +7,56 @@ let total = carrinho.reduce(
 
 // Dados do estoque dos produtos
 const estoqueProdutos = {
-  1: 53, // Produto 1
-  2: 32, // Produto 2
-  3: 21, // Produto 3
-  4: 65,
-  5: 87,
-  6: 10,
+  1: 49,
+  0: 48, 
+  12: 47, 
+  10: 46,
+  27: 45,
+  23: 44,
+  27: 43, 
+  20: 42, 
+  37: 41, 
+  10: 40,
+  11: 39,
+  12: 38,
+  13: 37, 
+  14: 36, 
+  15: 35, 
+  16: 34,
+  17: 33,
+  18: 32,
+  19: 31, 
+  20: 30, 
+  21: 29, 
+  22: 28,
+  23: 27,
+  24: 26,
+  25: 25, 
+  26: 24, 
+  27: 23, 
+  28: 22,
+  29: 21,
+  30: 20,
+  31: 19, 
+  32: 18, 
+  33: 17, 
+  34: 16,
+  35: 15,
+  36: 14,
+  37: 13, 
+  38: 12, 
+  39: 11, 
+  40: 10,
+  41: 9,
+  42: 8,
+  43: 7, 
+  44: 6, 
+  45: 5, 
+  46: 4,
+  47: 3,
+  48: 2,
+  49: 1,
+
 };
 
 // Função para salvar o carrinho no localStorage
@@ -46,18 +89,25 @@ function adicionarAoCarrinho(nomeProduto, preco, produtoId) {
 
 // Função para atualizar a exibição do estoque e desativar botão se o estoque acabar
 function atualizarEstoque(produtoId) {
-  const estoqueElemento = document.getElementById(
-    `estoque-produto-${produtoId}`,
-  );
+  const estoqueElemento = document.getElementById(`estoque-produto-${produtoId}`);
   const botaoElemento = document.getElementById(`btn-produto-${produtoId}`);
 
-  estoqueElemento.textContent = `Estoque: ${estoqueProdutos[produtoId]}`;
-  console.log(estoqueElemento);
-  if (estoqueProdutos[produtoId] === 0) {
-    botaoElemento.disabled = true;
-    botaoElemento.textContent = 'Esgotado';
+  if (estoqueElemento) {
+    estoqueElemento.textContent = `Estoque: ${estoqueProdutos[produtoId]}`;
+  }
+
+  if (botaoElemento) {
+    if (estoqueProdutos[produtoId] === 0) {
+      botaoElemento.disabled = true;
+      botaoElemento.textContent = 'Esgotado';
+    } else {
+      botaoElemento.disabled = false;
+      botaoElemento.textContent = 'Adicionar ao Carrinho';
+    }
   }
 }
+
+
 
 // Função para filtrar os produtos na pesquisa
 function filtrarProdutos() {
@@ -147,11 +197,14 @@ function finalizarCompra() {
 }
 
 const btnPix = document.getElementById('pix');
+const btnCredito = document.getElementById('Credito');
+const btnBoleto = document.getElementById('Boletos');
+
+// Atribuindo o evento de click para cada botão
 btnPix.addEventListener('click', formaPagamento);
-const btnCredito = document.getElementById('credito');
-btnPix.addEventListener('click', formaPagamento);
-const btnBoleto = document.getElementById('boleto');
-btnPix.addEventListener('click', formaPagamento);
+btnCredito.addEventListener('click', formaPagamento);
+btnBoleto.addEventListener('click', formaPagamento);
+
 
 function formaPagamento() {
   const modal = bootstrap.Modal.getInstance(
@@ -200,4 +253,86 @@ document.addEventListener('DOMContentLoaded', () => {
   for (let produtoId in estoqueProdutos) {
     atualizarEstoque(produtoId);
   }
+});
+
+// Variáveis globais
+const botaoLogin = document.getElementById('botaoLogin');
+const botaoSair = document.getElementById('botaoSair');
+const loginForm = document.getElementById('loginForm');
+const usernameInput = document.getElementById('username');
+const passwordInput = document.getElementById('password');
+const nomeUser = document.getElementById('nomeUser');
+
+// Função para exibir ou esconder os botões de login e sair
+function atualizarBotoesLogin() {
+  const usuario = localStorage.getItem('usuario');
+  if (usuario) {
+    botaoLogin.style.display = 'none'; // Esconde o botão de login
+    botaoSair.style.display = 'inline-block'; // Exibe o botão de sair
+    nomeUser.innerText = usuario;
+  } else {
+    botaoLogin.style.display = 'inline-block'; // Exibe o botão de login
+    botaoSair.style.display = 'none'; // Esconde o botão de sair
+    nomeUser.innerText = '';
+  }
+}
+
+// Função de login
+loginForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const usuario = usernameInput.value.trim();
+  const senha = passwordInput.value.trim();
+
+  if (usuario && senha) {
+    localStorage.setItem('usuario', usuario); // Armazena o nome de usuário no localStorage
+    atualizarBotoesLogin();
+    const modal = bootstrap.Modal.getInstance(
+      document.getElementById('loginModal'),
+    );
+    modal.hide(); // Fecha o modal
+  }
+});
+
+// Função para logout
+function sair() {
+  localStorage.removeItem('usuario'); // Remove o usuário do localStorage
+  atualizarBotoesLogin();
+}
+
+// Função para limpar os campos de login
+function limparFormularioLogin() {
+  usernameInput.value = '';
+  passwordInput.value = '';
+}
+
+// Ouvinte para o evento de fechamento do modal
+const loginModal = document.getElementById('loginModal');
+loginModal.addEventListener('hidden.bs.modal', limparFormularioLogin);
+
+// Atualizar os botões de login ao carregar a página
+document.addEventListener('DOMContentLoaded', atualizarBotoesLogin);
+
+// Função para exibir ou esconder os botões de login, sair e finalizar compra
+function atualizarBotoesLogin() {
+  const usuario = localStorage.getItem('usuario');
+  const botaoFinalizarCompra = document.getElementById('finalizarCompra');
+
+  if (usuario) {
+    botaoLogin.style.display = 'none'; // Esconde o botão de login
+    botaoSair.style.display = 'inline-block'; // Exibe o botão de sair
+    nomeUser.innerText = usuario;
+    botaoFinalizarCompra.style.display = 'inline-block'; // Exibe o botão de finalizar compra
+  } else {
+    botaoLogin.style.display = 'inline-block'; // Exibe o botão de login
+    botaoSair.style.display = 'none'; // Esconde o botão de sair
+    nomeUser.innerText = '';
+    botaoFinalizarCompra.style.display = 'none'; // Esconde o botão de finalizar compra
+  }
+}
+
+// Atualizar os botões de login ao carregar a página
+document.addEventListener('DOMContentLoaded', () => {
+  atualizarBotoesLogin(); // Atualiza a visibilidade dos botões
+  atualizarCarrinho(); // Atualiza a lista do carrinho
+  atualizarQuantidadeCarrinho(); // Atualiza a quantidade do carrinho
 });

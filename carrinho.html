@@ -21,9 +21,9 @@
                     <h5 class="modal-title" id="TituloModalCentralizado">Formas de pagamento</h5>
                 </div>
                 <div class="modal-body">
-                    <button type="button" class="btn btn-outline-info">PIX</button>
-                    <button type="button" class="btn btn-primary" id="pix">Credito</button>
-                    <button type="button" class="btn btn-primary" id="pix">Boletos</button>
+                    <button type="button" class="btn btn-primary" id="pix">pix</button>
+                    <button type="button" class="btn btn-primary" id="Credito">Credito</button>
+                    <button type="button" class="btn btn-primary" id="Boletos">Boletos</button>
                 </div>
             </div>
         </div>
@@ -35,13 +35,7 @@
         <div class="container">
             <div class="col-1">
                 <a class="navbar-brand" href="index.html">
-                    <nav class="navbar bg-body-tertiary">
-                        <div class="container">
-                          <a class="navbar-brand" href="#">
-                            <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24">
-                          </a>
-                        </div>
-                      </nav>
+                    <img src="assets/logo.png" alt="logo" width="57" height="49">
                 </a>
             </div>
             <div class="col-11">
@@ -76,38 +70,83 @@
                             d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
                     </svg>
 
+                    <li>
+                        <!-- Botão para abrir o modal -->
+                        <span id="nomeUser"></span>
+                        <!-- <button type="button" class="btn btn-primary btn-sm" id="botaoLogin" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            Login
+                        </button> -->
+
+                        <!-- Hover #3 -->
+                        <div class="box-3">
+                            <div id="botaoLogin" data-bs-toggle="modal" data-bs-target="#loginModal"
+                                class="btn btn-three">
+                                <span>Login</span>
+                            </div>
+                        </div>
+
+                        <div class="box-3">
+                            <div id="botaoSair" aria-label="Sair" onclick="sair()" class="btn btn-three">
+                                <span>Sair</span>
+                            </div>
+                        </div>
+
+                        <!-- <button type="button" class="btn btn-danger" id="botaoSair" aria-label="Sair"
+                            onclick="sair()">Sair</button> -->
+                    </li>
+
                 </ul>
             </div>
         </div>
 
     </nav>
 
-    <!-- Conteúdo do Carrinho -->
-    <div id="carrinho">
-        <h1>Carrinho de Compras</h1>
-
-
-
-        <ul id="listaCarrinho"></ul>
-        <p id="total">Total: R$ 0.00</p>
-
-        <button class="btn btn-success" onclick="finalizarCompra()">Finalizar Compra</button>
-        <button class="btn btn-danger" onclick="removerTodosItens()">Remover Todos</button>
+    <!-- Modal de Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Nome de Usuário</label>
+                            <input type="text" class="form-control" id="username" placeholder="Digite seu usuário" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Senha</label>
+                            <input type="password" class="form-control" id="password" placeholder="Digite sua senha" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Entrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 
 
 
-    <footer class="mt-4">
-        <div class=" card text-center bottom-0 start-50 translate-middle-x w-100">
-            <div class="card-header">
-                Featured
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content</p>
-            </div>
+    <!-- Conteúdo do Carrinho -->
+    <div id="carrinho">
+        <h1>Carrinho de Compras</h1>
+        <ul id="listaCarrinho"></ul>
+        <p id="total">Total: R$ 0.00</p>
+        <button id="finalizarCompra" class="btn btn-success" onclick="finalizarCompra()"
+            style="display: none;">Finalizar Compra</button>
+        <button class="btn btn-danger" onclick="removerTodosItens()">Remover Todos</button>
+    </div>
+
+    <div class="card text-center bottom-0 start-50 translate-middle-x w-100">
+        <div class="card-header">
+            Dúvidas
         </div>
-    </footer>
+        <div class="card-body">
+            <h5 class="card-title">(64) 99905-7295</h5>
+            <p class="card-text">@altopeças_e-commerce</p>
+        </div>
+    </div>
 
 
 
