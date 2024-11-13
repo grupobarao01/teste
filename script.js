@@ -270,7 +270,7 @@ const nomeUser = document.getElementById('nomeUser');
 console.log(localStorage.getItem('usuario'));
 
 if(localStorage.getItem('usuario')){
-  nomeUser = localStorage.getItem('usuario');
+  nomeUser.innerText = localStorage.getItem('usuario');
 }
 
 
