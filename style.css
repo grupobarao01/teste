@@ -2,13 +2,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color:#333333;
+    background-color:#080808;
 
 }
 
 /* Barra de Navegação */
 nav {
-    background-color: #333;
+    background-color: #080808;
     color: white;
     padding: 10px;
     text-align: center;
@@ -36,7 +36,7 @@ nav ul li a:hover {
 
 /* Tela Inicial */
 .hero {
-    background-color: #333333;
+    background-color: #080808;
     color: white;
     text-align: center;
     padding: 100px 20px;
@@ -53,7 +53,7 @@ nav ul li a:hover {
 
 .hero .btn {
     background-color: white;
-    color:#333333;
+    color:#080808;
     padding: 10px 20px;
     text-decoration: none;
     font-size: 18px;
