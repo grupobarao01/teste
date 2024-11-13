@@ -5,6 +5,8 @@ let total = carrinho.reduce(
   0,
 );
 
+
+
 // Dados do estoque dos produtos
 const estoqueProdutos = {
   1: 49,
@@ -264,6 +266,13 @@ const loginForm = document.getElementById('loginForm');
 const usernameInput = document.getElementById('username');
 const passwordInput = document.getElementById('password');
 const nomeUser = document.getElementById('nomeUser');
+
+console.log(localStorage.getItem('usuario'));
+
+if(localStorage.getItem('usuario')){
+  nomeUser = localStorage.getItem('usuario');
+}
+
 
 // Função para exibir ou esconder os botões de login e sair
 function atualizarBotoesLogin() {
