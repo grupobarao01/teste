@@ -267,11 +267,10 @@ const usernameInput = document.getElementById('username');
 const passwordInput = document.getElementById('password');
 const nomeUser = document.getElementById('nomeUser');
 
-console.log(localStorage.getItem('usuario'));
 
-if(localStorage.getItem('usuario')){
-  nomeUser.innerText = localStorage.getItem('usuario');
-}
+// if(localStorage.getItem('usuario')){
+//   nomeUser.innerText = localStorage.getItem('usuario');
+// }
 
 
 // Função para exibir ou esconder os botões de login e sair
