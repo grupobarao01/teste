@@ -57,6 +57,8 @@ const estoqueProdutos = {
   48: 2,
   49: 1,
 
+
+
 };
 
 // Função para salvar o carrinho no localStorage
