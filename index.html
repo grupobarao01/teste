@@ -114,12 +114,16 @@
     <script src="script.js"></script>
 
     <script>
-        const nomeUser = document.getElementById('nomeUser');
 
+        function inicia(){
 
-        if (localStorage.getItem('usuario')) {
-            nomeUser.innerText = localStorage.getItem('usuario');
+            const nomeUser = document.getElementById('nomeUser');
+            if (localStorage.getItem('usuario')) {
+                nomeUser.innerText = localStorage.getItem('usuario');
+            }
         }
+
+        inicia();
     </script>
 </body>
 
