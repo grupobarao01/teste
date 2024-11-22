@@ -64,17 +64,10 @@ nav ul li a {
 .hero .btn:hover {
     background-color: #f1f1f1;
 }
-
-/* .carousel-item {
-    width: 600px;
-    right: 600px;
-} */
-
-.carousel-inner{
-    width: 600px;
-    right: 600px;
+.carousel-item img{
+    max-width: 500px; 
+    max-height: 300px;
 }
-
 /* Galeria de Produtos */
 .container {
     display: flex;
