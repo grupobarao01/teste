@@ -65,8 +65,8 @@ nav ul li a {
     background-color: #f1f1f1;
 }
 .carousel-item img{
-    max-width: 500px; 
-    max-height: 300px;
+    max-width: 100%; 
+    max-height: 400px;
 }
 /* Galeria de Produtos */
 .container {
