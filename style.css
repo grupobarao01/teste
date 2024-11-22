@@ -65,6 +65,11 @@ nav ul li a {
     background-color: #f1f1f1;
 }
 
+.carousel-item {
+    width: 600px;
+    right: 600px;
+}
+
 /* Galeria de Produtos */
 .container {
     display: flex;
